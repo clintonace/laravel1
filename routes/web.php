@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $name ="Clinton";
+    $name ="Clinton praise";
     return view('welcome', compact('name'));
 });

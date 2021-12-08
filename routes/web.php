@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $name ="Clinton ";
+    $name ="Clinton";
     return view('welcome', compact('name'));
-});
+})->name('welcome');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('hot-offers', 'MainController@hot')->name('hot');
+
+Route::get('Add-Products', 'ProductController@add')->name('add');
+Route::post('/store-product', 'ProductController@store')->name('product.store');
+Route::get('all-products', 'ProductController@products')->name('products.all');
+Route::get('all-new', 'CategoryController@new')->name('new');
+Route::post('/store-category', 'CategoryController@cart')->name('category.store');

@@ -245,6 +245,12 @@
                                  <li><a href="hot-offers">Hot Offers</a></li>
 
                                  <li><a href="{{route('view')}}">Products View</a></li>
+
+                                 <li><a href="{{route('dew')}}">Products View1</a></li>
+
+                                 <li><a href="{{route('hew')}}">Products View2</a></li>
+
+                                 <li><a href="{{route('few')}}">Products View3</a></li>
                              </ul>
                          </div>
                      </div>

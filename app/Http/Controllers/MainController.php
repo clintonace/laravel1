@@ -24,4 +24,27 @@ class MainController extends Controller
     $products = Product::all();
      return view('viewproducts', compact('products'));
     }
+
+    public function dewproducts()
+    {
+        $products = Product::all();
+        return view('dewproducts',compact('products'));
+    }
+
+    public function hewproducts()
+{
+     $products=Product::all();
+     return view('hewproducts',compact('products'));
+
+}
+
+public function fewproducts()
+{
+$products=Product::all();
+return view('fewproducts',compact('products'));
+
+}
+
+
+
 }

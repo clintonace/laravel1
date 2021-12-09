@@ -23,6 +23,7 @@ Auth::routes();
 
 
 Route::get('/', 'MainController@index')->name('welcome');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('view-products', 'MainController@viewproducts')->name('view');
@@ -30,7 +31,17 @@ Route::get('view-products', 'MainController@viewproducts')->name('view');
 Route::get('hot-offers', 'MainController@hot')->name('hot');
 
 Route::get('Add-Products', 'ProductController@add')->name('add');
+
 Route::post('/store-product', 'ProductController@store')->name('product.store');
+
 Route::get('all-products', 'ProductController@products')->name('products.all');
+
 Route::get('all-new', 'CategoryController@new')->name('new');
+
 Route::post('/store-category', 'CategoryController@cart')->name('category.store');
+
+Route::get('dew-products', 'MainController@dewproducts')->name('dew');
+
+Route::get('hew-products', 'MainController@hewproducts')->name('hew');
+
+Route::get('few-products','MainController@fewproducts')->name('few');

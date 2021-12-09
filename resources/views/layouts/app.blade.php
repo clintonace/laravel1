@@ -240,9 +240,11 @@
                      <div class="col-md-12 align-self-center">
                          <div class="ec-main-menu">
                              <ul>
-                                 <li><a href="index.html">Home</a></li>
+                                 <li><a href="{{route('welcome')}}">Home</a></li>
 
                                  <li><a href="hot-offers">Hot Offers</a></li>
+
+                                 <li><a href="{{route('view')}}">Products View</a></li>
                              </ul>
                          </div>
                      </div>

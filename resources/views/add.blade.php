@@ -19,7 +19,7 @@
                         <div class="col-md-6 col-sm-12">
                             <!-- ec-breadcrumb-list start -->
                             <ul class="ec-breadcrumb-list">
-                                <li class="ec-breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="ec-breadcrumb-item"><a href="/">Home</a></li>
                                 <li class="ec-breadcrumb-item active">Profile</li>
                             </ul>
                             <!-- ec-breadcrumb-list end -->
@@ -69,14 +69,11 @@
 
                                              <div class="form-group  m-1 p-2">
                                                  <label for="">Category</label>
-
-                                                 <select class="form-control" name="" id="">
+                                                 <select class="form-control" name="category_id" id="">
                                                      <option value="" selected disabled>Select a category</option>
-                                                     @foreach ($collection as $item)
-                                                     <option value="">{{$product->category}}</option>
+                                                     @foreach ($categories as $item)
+                                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                                      @endforeach
-
-
                                                  </select>
                                              </div>
 
@@ -467,4 +464,7 @@
 
 </body>
 
-<!-- Mirrored from loopinfosol.in/themeforest/ekka-html-v2/ekka-html/user-profile.html b
+<!-- Mirrored from loopinfosol.in/themeforest/ekka-html-v2/ekka-html/user-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 22:05:43 GMT -->
+</html>
+
+@endsection

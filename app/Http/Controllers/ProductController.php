@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,8 +12,8 @@ class ProductController extends Controller
 
     public function add()
     {
-
-     return view('add');
+    $categories = Category::orderBy('name','asc')->get();
+    return view('add',compact('categories'));
     }
 
     public function store(Request $request)
@@ -28,7 +29,7 @@ class ProductController extends Controller
         $product->title = $request->title;
         $product->price = $request->price;
         $product->description = $request->description;
-        $product->category = $request->category;
+        $product->category_id = $request->category_id;
         $product->quantity = $request->quantity;
         $product->user_id = Auth::user()->id;
         $product->image = $filename;

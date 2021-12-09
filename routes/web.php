@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $name ="Clinton";
-    return view('welcome', compact('name'));
-})->name('welcome');
+// Route::get('/', function () {
+    // $name ="Clinton";
+    // return view('welcome', compact('name'));
+// })->name('welcome');
 
 Auth::routes();
 
+
+Route::get('/', 'MainController@index')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('view-products', 'MainController@viewproducts')->name('view');
 
 Route::get('hot-offers', 'MainController@hot')->name('hot');
 

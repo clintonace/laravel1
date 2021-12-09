@@ -13,7 +13,7 @@
                         <li><a href="home">User Profile</a></li>
                         <li><a href="Add-Products">Add Products</a></li>
                         <li><a href="{{route('products.all')}}">All products</a></li>
-                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="all-new">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
                         <li><a href="track-order.html">Track Order</a></li>
                         <li><a href="user-invoice.html">Invoice</a></li>
